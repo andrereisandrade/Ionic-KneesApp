@@ -1,0 +1,57 @@
+page-login {
+    .login{
+      // background: color($colors, energy);
+
+      background-image:url('../assets/img/slide-1.jpg');
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+       // background-image: url("../assets/img/slide.jpg");
+.fixed-content{
+    background: linear-gradient(to right, rgba(83, 88, 166, 0.62) 0%,rgba(113, 163, 207, 0.64) 100%);
+}
+
+   ::-webkit-input-placeholder {
+       color: white !important;
+   }
+
+    :-moz-placeholder {
+       color: white !important;
+   }
+
+    :-ms-input-placeholder {
+       /* IE10+ */
+       color: white !important;
+   }
+   }
+   .logo{
+       background-color:transparent;
+       height:auto;
+       border-radius: 100%;
+       width:100%;
+   }
+   .register{
+       background-color:transparent;
+       color:white;
+       border-color:white;
+       border:1px solid white;
+       margin-top:20px;
+       height: 35px;
+       font-size: 14px;
+   }
+   .forgePassword{
+       text-decoration: underline;
+       margin-top:20px;
+       color:white;
+       font-size: 14px;
+   }
+   .input{
+        padding:0px !important;
+        font-size: 14px;
+        margin-top:10px;
+        border-top:none;
+        background:none;
+        box-shadow:none;
+   }
+   }

@@ -1,0 +1,77 @@
+<!-- <ion-header>
+  <ion-navbar primary>
+    <ion-title>KnessApp</ion-title>
+  </ion-navbar>
+</ion-header> -->
+<ion-header>
+  <ion-navbar *ngIf="searchenable==false"primary>
+    <ion-buttons start>
+      <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title  >KnessApp</ion-title>
+
+    <ion-buttons end>
+      <button (click)="activateSearch()" ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-navbar *ngIf="searchenable==true" color="primary">
+    <ion-searchbar
+    placeholder="Procurar"
+    [showCancelButton]="false"
+     (input)="search($event)"
+     (ionCancel)="onCancel($event)"
+     >     
+    </ion-searchbar>
+    <ion-buttons start>
+      <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<!-- <ion-header>
+  <ion-navbar color="primary">
+    <ion-searchbar (input)="search($event)"></ion-searchbar>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content class="cards-bg">
+  <ion-card ion-item *ngFor="let event of events">
+    <img src="{{event.photo}}" (click)="goToDetails(event.id)">
+    <ion-card-content>
+      <ion-card-title >
+        <label class="title">
+        {{ event.name }}
+      </label>
+
+      </ion-card-title>
+      <p>
+        {{ event.date | date }}
+      </p>
+    </ion-card-content>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="blockquote" icon-left>
+          <ion-icon name='thumbs-up'></ion-icon>
+          <p>50 CURTIU</p>
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small color="blockquote" (click)="location(event.id)" icon-left>
+          <ion-icon name='pin'></ion-icon>
+          <p>local</p>
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="blockquote" icon-left>
+          <ion-icon name='share-alt'></ion-icon>
+          <p>compartilhar</p>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>

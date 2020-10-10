@@ -1,0 +1,107 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+        <ion-title>{{event?.name}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="getting-started">
+    <div class="home-hello">
+        <img src="{{event?.photo}}" />
+        <!-- <div class="hello-title" text-wrap>
+      <h1>{{event?.name}}</h1>{{event?.date}}
+    </div> -->
+    </div>
+
+    <ion-row no-padding>
+        <ion-col text-center>
+            <button ion-button clear small color="blue" icon-left>
+              <ion-icon name='ios-cart'></ion-icon>
+            </button>
+        </ion-col>
+        <ion-col text-center>
+            <button ion-button clear small color="blockquote" (click)="location(event?.id)" icon-left>
+            <ion-icon name='pin'></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col text-center>
+            <button ion-button clear small color="blockquote" icon-left>
+          <ion-icon name='thumbs-up'></ion-icon>
+        </button>
+        </ion-col>
+        <ion-col text-center>
+            <button ion-button clear small color="blockquote" icon-left>
+          <ion-icon name='share-alt'></ion-icon>
+        </button>
+        </ion-col>
+    </ion-row>
+
+    <ion-row no-padding class="description">
+        <ion-col padding  text-wrap>
+            <p color="blockquote">200 Confirmaram</p>
+        </ion-col>
+        <ion-col padding text-wrap>
+            <button ion-button small>Confirmar Presença</button>
+        </ion-col>
+    </ion-row>
+
+    <div padding class="description" textcol="blockquote">
+        <h3>Descrição</h3>
+        <p>{{event?.description}}</p>
+    </div>
+    <div padding text-center>
+        <a href="">Anunciante do Evento</a> 
+    </div>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>{{user?.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+  <ion-card ion-item *ngFor="let user of users">
+    <img src="{{imageURL}}/{{user?.image}}" (click)="goToDetails(user.id)">
+    <ion-card-content>
+      <ion-card-title>
+        {{ user.name }}
+        {{user.id}}
+      </ion-card-title>
+      <p>
+        {{user.city}},{{user.state}}
+      </p>
+    </ion-card-content>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-left>
+          <ion-icon name='thumbs-up'></ion-icon>
+          50 CURTIU
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small color="danger" icon-left>
+          <ion-icon name='map'></ion-icon>
+          LOCAL
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left>
+          <ion-icon name='share-alt'></ion-icon>
+          Share
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card> -->

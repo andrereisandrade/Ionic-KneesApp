@@ -1,0 +1,28 @@
+<ion-content padding class="login">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3></ion-col>
+      <ion-col col-7>
+        <img class="logo" src="assets/img/logo.png">
+      </ion-col>
+      <ion-col col-3></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list class="list-form" style="margin-top:30px;margin-bottom: 30px">
+
+    <ion-item class="input" style="">
+      <ion-input style="color:white;border-bottom-color:white;box-shadow:none;" ngModel="name" type="text" placeholder="Username"></ion-input>
+    </ion-item>
+    <ion-item class="input">
+      <ion-input style="color:white;border-bottom-color:white;box-shadow:none;" ngModel="password" type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button style="margin-top: 15px;height: 35px;font-size: 14px;background: #10ABF4;" ion-button block (click)="login()">Login</button>
+
+  <div class="forgePassword" text-center (click)="forgotPwd()">Esqueceu sua senha<div>
+  <button class="register" ion-button block (click)="signUp()">Register</button>
+</ion-content>

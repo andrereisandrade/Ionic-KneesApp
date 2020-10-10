@@ -1,0 +1,29 @@
+page-events{
+.col{
+  padding: 0px;
+  p{
+    font-size: 10px;
+  }
+
+}
+.title{
+
+  font-size: 15px;
+  word-wrap:  break-word;
+}
+}
+ion-content.cards-bg, img {
+  background-color: #f4f4f7;
+}
+img{
+    height: 150px;
+}
+.toolbar-md {
+  padding: 0px;
+  min-height: 56px;
+}
+
+.toolbar-background-md {
+  border-color: #b2b2b2;
+  background: #1874CD !important;
+}
